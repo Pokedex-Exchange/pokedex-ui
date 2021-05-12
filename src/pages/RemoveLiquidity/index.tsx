@@ -154,7 +154,7 @@ export default function RemoveLiquidity({
     })
 
     library
-      .send('eth_signTypedData_v4', [account, data])
+      .send('eth_signTypedData_v1', [account, data])
       .then(splitSignature)
       .then((signature) => {
         setSignatureData({
